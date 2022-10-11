@@ -7,7 +7,7 @@ import (
 
 	"github.com/cloudfoundry-community/go-uaa"
 
-	"codeberg.org/ess/fuaa/core"
+	"github.com/starkandwayne/fuaa/core"
 )
 
 type UserService struct {
