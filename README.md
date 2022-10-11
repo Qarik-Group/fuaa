@@ -82,3 +82,6 @@ Unfortunately, there is not presently a way to reset the standalone server's mem
 * This library was extracted from another project when we realized that we needed it for more than one project.
 * It began its life as jeuaa: Just Enough (TM) UAA. The name was changed just because "fuaa" is *way* easier to type.
 
+## History ##
+
+* v1.0.0 - Initial release
