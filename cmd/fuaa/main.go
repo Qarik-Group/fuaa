@@ -12,8 +12,8 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"codeberg.org/ess/fuaa/http"
-	"codeberg.org/ess/fuaa/memory"
+	"github.com/starkandwayne/fuaa/http"
+	"github.com/starkandwayne/fuaa/memory"
 )
 
 func meat() int {

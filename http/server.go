@@ -6,8 +6,8 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"codeberg.org/ess/fuaa/core"
-	"codeberg.org/ess/fuaa/http/routes"
+	"github.com/starkandwayne/fuaa/core"
+	"github.com/starkandwayne/fuaa/http/routes"
 )
 
 func Server(bind string, services *core.Services, urls map[string]string) *http.Server {
