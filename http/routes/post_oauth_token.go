@@ -7,8 +7,8 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"codeberg.org/ess/fuaa/core"
-	"codeberg.org/ess/fuaa/http/routes/registry"
+	"github.com/starkandwayne/fuaa/core"
+	"github.com/starkandwayne/fuaa/http/routes/registry"
 )
 
 type PostOauthToken struct {

@@ -1,7 +1,7 @@
 # fuaa #
 
-[![Go Report Card](https://goreportcard.com/badge/codeberg.org/ess/fuaa)](https://goreportcard.com/report/codeberg.org/ess/fuaa)
-[![Documentation](https://godoc.org/codeberg.org/ess/fuaa?status.svg)](http://godoc.org/codeberg.org/ess/fuaa)
+[![Go Report Card](https://goreportcard.com/badge/github.com/starkandwayne/fuaa)](https://goreportcard.com/report/github.com/starkandwayne/fuaa)
+[![Documentation](https://godoc.org/github.com/starkandwayne/fuaa?status.svg)](http://godoc.org/github.com/starkandwayne/fuaa)
 
 A faux UAA server that acts just enough like a real UAA server to be dangerous.
 
@@ -10,7 +10,7 @@ A faux UAA server that acts just enough like a real UAA server to be dangerous.
 You can use fuaa either as a standalone service that runs on 0.0.0.0:8001, or you can use it programmatically in your test suite. To install the standalone executable, do this:
 
 ```
-go get -u codeberg.org/ess/fuaa/cmd/fuaa
+go installl github.com/starkandwayne/fuaa/cmd/fuaa
 ```
 
 For programmatic usage, treat it like you would any library.
@@ -40,9 +40,9 @@ The last two of those items should coincide with each other.
 import (
   "testing"
 
-  "codeberg.org/ess/fuaa/core"
-  "codeberg.org/ess/fuaa/memory"
-  "codeberg.org/ess/fuaa/http"
+  "github.com/starkandwayne/fuaa/core"
+  "github.com/starkandwayne/fuaa/memory"
+  "github.com/starkandwayne/fuaa/http"
 )
 
 var services *core.Services
@@ -53,6 +53,12 @@ func MyTestSetup() {
   server := http.Server("0.0.0.0:8675", services, urls)
 
   go server.ListenAndServe()
+}
+
+// Since best practice is to reset before each test case, we should also
+// set up our test user.
+func SetupUser() {
+  services.Users.Add("admin", "supersecretpassword")
 }
 
 // Run this between your test cases to clear the server's records
@@ -84,4 +90,5 @@ Unfortunately, there is not presently a way to reset the standalone server's mem
 
 ## History ##
 
+* v1.0.1 - Now with a new home
 * v1.0.0 - Initial release

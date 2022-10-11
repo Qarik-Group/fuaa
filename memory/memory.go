@@ -3,7 +3,7 @@ package memory
 import (
 	"github.com/labstack/echo/v4"
 
-	"codeberg.org/ess/fuaa/core"
+	"github.com/starkandwayne/fuaa/core"
 )
 
 func NewServices() *core.Services {

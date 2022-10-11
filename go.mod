@@ -1,4 +1,4 @@
-module codeberg.org/ess/fuaa
+module github.com/starkandwayne/fuaa
 
 go 1.14
 
